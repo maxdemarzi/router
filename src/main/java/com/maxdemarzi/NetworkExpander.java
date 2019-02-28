@@ -34,6 +34,7 @@ public class NetworkExpander implements PathExpander<String> {
                     Subnet subnet = Subnet.createInstance(route);
                     if(subnet.isInNet(address)) {
                         relationships.add(routes_to);
+                        break;
                     }
                 } catch (UnknownHostException e) {
                     e.printStackTrace();
