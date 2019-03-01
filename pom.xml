@@ -10,6 +10,7 @@
 
     <properties>
         <neo4j.version>3.5.2</neo4j.version>
+        <ipaddress.version>4.2.0</ipaddress.version>
     </properties>
 
     <dependencies>
@@ -23,6 +24,12 @@
             <artifactId>neo4j</artifactId>
             <version>${neo4j.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.seancfoley</groupId>
+            <artifactId>ipaddress</artifactId>
+            <version>${ipaddress.version}</version>
         </dependency>
 
         <!-- Test Dependencies -->
@@ -55,7 +62,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <!-- Neo4j Procedures require Java 8 -->
                     <source>1.8</source>

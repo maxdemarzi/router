@@ -26,7 +26,7 @@ public class Procedures {
     public Stream<PathResult> router(@Name("from") String from, @Name("to") String to) {
         Node router = db.findNode(Labels.Router, "ip", from);
         Node server = db.findNode(Labels.Server, "ip", to);
-        if (router != null) {
+        if (router != null && server != null) {
             TraversalDescription td = db.traversalDescription()
                     .depthFirst()
                     .expand(new NetworkExpander(to))

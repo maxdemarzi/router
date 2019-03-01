@@ -53,9 +53,9 @@ public class RouterTest {
         "CREATE (ser3:Server {ip: '10.175.122.13'})" +
 
         "CREATE (s1)-[:TRANSLATES_TO]->(r1)" +
-        "CREATE (r1)-[:ROUTES_TO {ip:'10.175.247.4', routes:['10.175.112.0/20', '10.175.108.0/22', '10.175.112.0/20', '10.182.14.64/26', '10.182.22.0/25']}]->(r2)" +
-        "CREATE (r1)-[:ROUTES_TO {ip:'10.182.32.3', routes:['10.182.32.0/29']}]->(r3)" +
-        "CREATE (r1)-[:ROUTES_TO {ip:'10.182.32.1', routes:['10.182.32.1/32']}]->(r4)" +
+        "CREATE (r1)-[:ROUTES_TO {routes:['10.175.112.0/20', '10.175.108.0/22', '10.182.14.64/26', '10.182.22.0/25']}]->(r2)" +
+        "CREATE (r1)-[:ROUTES_TO {routes:['10.182.32.0/29']}]->(r3)" +
+        "CREATE (r1)-[:ROUTES_TO {routes:['10.182.32.1/32']}]->(r4)" +
         "CREATE (r2)-[:TRANSLATES_TO {ip:'10.175.66.9', mac:'0081.c4dc.6161' }]->(i1)" +
         "CREATE (r2)-[:TRANSLATES_TO {ip:'10.175.66.5', mac:'e4c7.221c.87c1' }]->(i2)" +
         "CREATE (r2)-[:TRANSLATES_TO {ip:'10.175.122.2', mac:'0081.c4dc.6161' }]->(i3)" +
